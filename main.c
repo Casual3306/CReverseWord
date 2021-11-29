@@ -5,7 +5,6 @@
 int main(int argc, char *argv[]) {
     // Define the string and index variable
     const char *string;
-    int index;
 
     // Main program. Check to see if the user has supplied the program with at least
     // two arguments
