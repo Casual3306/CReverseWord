@@ -9,36 +9,36 @@
 #include <string.h>
 #include <stdlib.h>
 
-int string_length(char *pointer)
+int lens(char *ptr)
 {
-    int c = 0;
+    int a = 0;
 
-    while( *(pointer + c) != '\0' )
-        c++;
+    while( *(ptr + a) != '\0' )
+        a++;
 
-    return c;
+    return a;
 }
 
-void reverse(char *s)
+void rev(char *s)
 {
-    int length, c;
-    char *begin, *end, temp;
+    int len, c;
+    char *b, *e, t;
 
-    length = string_length(s);
-    begin  = s;
-    end    = s;
+    len = lens(s);
+    b  = s;
+    e    = s;
 
-    for (c = 0; c < length - 1; c++)
-        end++;
+    for (c = 0; c < (len - 1); c++)
+        e++;
 
-    for (c = 0; c < length/2; c++)
+    for (c = 0; c < (len / 2); c++)
     {
-        temp   = *end;
-        *end   = *begin;
-        *begin = temp;
+        t   = *e;
+        *e   = *b;
+        *b = t;
 
-        begin++;
-        end--;
+        b++;
+        e--;
     }
 }
 
@@ -61,7 +61,7 @@ void revs(const char *_string) {
     strncpy((char *) data, _string, 100);
 
     printf("\n%sString reversed:%s ", GS, EC);
-    reverse((char *) data);
+    rev((char *) data);
     printf("%s%s%s\n", WS, (char *) data, EC);
 }
 
