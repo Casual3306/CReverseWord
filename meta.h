@@ -25,8 +25,8 @@ void rev(char *s)
     char *b, *e, t;
 
     len = lens(s);
-    b  = s;
-    e    = s;
+    b = s;
+    e = s;
 
     for (c = 0; c < (len - 1); c++)
         e++;
